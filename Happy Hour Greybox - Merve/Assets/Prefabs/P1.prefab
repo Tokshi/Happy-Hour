@@ -102,12 +102,11 @@ GameObject:
   - component: {fileID: 6239703824754499599}
   - component: {fileID: 5637986362373283580}
   - component: {fileID: 2275737364692332843}
-  - component: {fileID: 181392774648854273}
   - component: {fileID: 7233534979450617913}
   - component: {fileID: 7627763689732688354}
   m_Layer: 0
   m_Name: P1
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,10 +154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _settings:
-    InitalHitPoint: 0
-    Speed: 0
-    StunDuration: 0
-    ThrowOffset: {x: 0, y: 0, z: 0}
+    InitalHitPoint: 4
+    Speed: 200
+    StunDuration: 2
+    ThrowOffset: {x: 0, y: 0.2, z: -0.8}
   _hittingBottlePrefab: {fileID: 6781667712720484947, guid: 0d3a35f3d351e8742827371bb04921a9,
     type: 3}
   _spillingBottlePrefab: {fileID: 930079968075421981, guid: 2b3c798d50a22254790829c24c00dd46,
@@ -166,20 +165,6 @@ MonoBehaviour:
   _colliders:
   - {fileID: 6239703825306303526}
   - {fileID: 7233534979450617913}
---- !u!114 &181392774648854273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6239703824754499592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d458827f42536348aab80129781ca2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxDeviationAmount: 20
-  _showCone: 1
 --- !u!136 &7233534979450617913
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -188,12 +173,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6239703824754499592}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.591907
-  m_Height: 1.2487202
+  m_Radius: 0.72638273
+  m_Height: 2.1937032
   m_Direction: 1
-  m_Center: {x: -7.5836977e-16, y: 0.124360085, z: 0.09190704}
+  m_Center: {x: 0.029950142, y: 0.039963007, z: 0.091907024}
 --- !u!54 &7627763689732688354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -205,10 +190,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!1 &6239703825306303521
 GameObject:
