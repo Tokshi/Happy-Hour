@@ -9,6 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3653451226211791865}
+  - component: {fileID: 3545439971005829476}
+  - component: {fileID: 8681732392580697205}
+  - component: {fileID: 5813311960869826093}
+  - component: {fileID: 4133881566675286491}
+  - component: {fileID: 4877199211922422852}
   m_Layer: 0
   m_Name: P3
   m_TagString: Untagged
@@ -23,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3653451226211791866}
-  m_LocalRotation: {x: -0, y: 0.0000009834765, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.99, y: 3.006, z: -7.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -32,6 +37,88 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3545439971005829476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653451226211791866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef3bf72dfad81d45bf4af0c8d32fffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: 3
+  _inaccurate: 0
+--- !u!114 &8681732392580697205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653451226211791866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aabeef176d767f4d81664b3e697bed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _settings:
+    InitalHitPoint: 0
+    Speed: 0
+    StunDuration: 0
+    ThrowOffset: {x: 0, y: 0, z: 0}
+  _hittingBottlePrefab: {fileID: 6781667712720484947, guid: 0d3a35f3d351e8742827371bb04921a9,
+    type: 3}
+  _spillingBottlePrefab: {fileID: 930079968075421981, guid: 2b3c798d50a22254790829c24c00dd46,
+    type: 3}
+  _colliders:
+  - {fileID: 3653451227011907621}
+  - {fileID: 4133881566675286491}
+--- !u!114 &5813311960869826093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653451226211791866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d458827f42536348aab80129781ca2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxDeviationAmount: 20
+  _showCone: 1
+--- !u!136 &4133881566675286491
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653451226211791866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.55325806
+  m_Height: 1.1441739
+  m_Direction: 1
+  m_Center: {x: -2.9895486e-15, y: 0.314386, z: 0.053258076}
+--- !u!54 &4877199211922422852
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653451226211791866}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3653451227011907624
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,7 +131,6 @@ GameObject:
   - component: {fileID: 3653451227011907619}
   - component: {fileID: 3653451227011907620}
   - component: {fileID: 3653451227011907621}
-  - component: {fileID: 3653451227011907622}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -125,22 +211,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &3653451227011907622
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3653451227011907624}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &3653451227887536748
 GameObject:
   m_ObjectHideFlags: 0
