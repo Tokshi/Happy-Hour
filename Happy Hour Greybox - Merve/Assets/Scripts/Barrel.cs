@@ -13,12 +13,13 @@ namespace Project
         #region -------------------------Unity Messages
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Wall") || other.CompareTag("Player") || other.CompareTag("Solid"))
+            if (other.CompareTag("Wall") || other.CompareTag("Character") || other.CompareTag("Solid"))
             {
                 Destroy(this.gameObject);
             }
         }
         #endregion
+
 
         #region -------------------------details
         #endregion
