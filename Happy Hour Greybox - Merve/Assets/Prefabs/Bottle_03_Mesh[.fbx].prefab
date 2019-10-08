@@ -125,7 +125,7 @@ MonoBehaviour:
   _spillPrefab: {fileID: 6201655760641792096, guid: 817d222a590b4fd41974508b632b9b75,
     type: 3}
   _speed: 1
-  _archSize: {x: 4, y: 2}
+  _archSize: {x: 6, y: 2}
   _movingCurve:
     serializedVersion: 2
     m_Curve:
